@@ -5,6 +5,7 @@ import { map, take } from 'rxjs/operators';
 import { AuthService } from './auth.service';
 import { Organization } from './organization/organization.model';
 import { User } from './user';
+import {Offer} from "./homepage-offer/offers.model";
 
 @Injectable()
 export class UserService {
@@ -45,5 +46,14 @@ export class UserService {
 
   getFullName(user: User): string {
     return `${user.firstName} ${user.lastName}`;
+  }
+
+  canUserEditOffer(offer: Offer): Observable<boolean> {
+    return this.authService.user$
+      .pipe(map((user: User) => this.isUserOrganizationMember(user, offer.organization)));
+  }
+
+  private isUserOrganizationMember(user: User, organization: Organization) {
+    return user && organization && user.organizations.filter(organ => organ.id === organization.id).length > 0;
   }
 }

@@ -3,19 +3,7 @@
         <img class="card-img" src="{{ offer.image }}" alt="{{ offer.title }}">
         <div class="card-img-overlay">
             <div class="col-md-12 header-panels-box">
-                <div class="header-panels">
-                    <div class="header-panel">{{ offer.title }}</div>
-                    <div class="clearfix"></div>
-                    <div class="header-labels">
-                        <volontulo-icon-label icon="place">{{ offer.location }}</volontulo-icon-label>
-                        <volontulo-icon-label icon="access_time">{{ offer.startedAt | date:'shortDate' }} - {{ offer.finishedAt | date:'shortDate' }}</volontulo-icon-label>
-                        <volontulo-icon-label icon="edit" *ngIf="(isUserOrgMember$ | async)">
-                            <a [routerLink]="['edit']" class="btn btn-sm">
-                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-                            Edytuj ofertę</a>
-                        </volontulo-icon-label>
-                    </div>
-                </div>
+                <volontulo-offer-header [offer]="offer"></volontulo-offer-header>
             </div>
         </div>
     </div>

@@ -1,0 +1,14 @@
+<div class="header-panels">
+  <div class="header-panel">{{ offer.title }}</div>
+  <div class="clearfix"></div>
+  <div class="header-labels">
+    <volontulo-icon-label icon="place">{{ offer.location }}</volontulo-icon-label>
+    <volontulo-icon-label icon="access_time">{{ offer.startedAt | date:'shortDate' }} - {{ offer.finishedAt | date:'shortDate' }}</volontulo-icon-label>
+    <volontulo-icon-label icon="edit" *ngIf="showEditButton$ | async">
+      <a [routerLink]="['edit']" class="btn btn-sm">
+        <span class="glyphicon glyphicoon-edit" aria-hidden="true"></span>
+        Edytuj ofertę
+      </a>
+    </volontulo-icon-label>
+  </div>
+</div>

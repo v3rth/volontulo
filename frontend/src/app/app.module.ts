@@ -55,6 +55,7 @@ import { ContactResolver } from './resolvers';
 import { FormErrorComponent } from './form-error/form-error.component';
 import { ContactService } from './contact.service';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { OfferHeaderComponent } from './offers/offer-header/offer-header.component';
 
 Raven.config(environment.sentryDSN).install();
 
@@ -214,7 +215,8 @@ registerLocaleData(localePl);
     ContactComponent,
     FormErrorComponent,
     OrganizationsListComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    OfferHeaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'volontulo' }),
