@@ -8,6 +8,7 @@ import { IconComponent } from '../../icon/icon.component';
 import { IconLabelComponent } from '../../icon-label/icon-label.component';
 import { OfferDetailComponent } from './offer-detail.component';
 import { OffersService } from '../../homepage-offer/offers.service';
+import { OfferHeaderComponent } from "../offer-header/offer-header.component";
 
 describe('OfferDetailComponent', () => {
   let component: OfferDetailComponent;
@@ -20,6 +21,7 @@ describe('OfferDetailComponent', () => {
       ],
       declarations: [
         OfferDetailComponent,
+        OfferHeaderComponent,
         IconLabelComponent,
         IconComponent,
       ],
