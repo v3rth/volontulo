@@ -5,7 +5,7 @@ import { map, take } from 'rxjs/operators';
 import { AuthService } from './auth.service';
 import { Organization } from './organization/organization.model';
 import { User } from './user';
-import {Offer} from "./homepage-offer/offers.model";
+import {Offer} from './homepage-offer/offers.model';
 
 @Injectable()
 export class UserService {

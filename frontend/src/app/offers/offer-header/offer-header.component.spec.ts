@@ -2,11 +2,11 @@ import { Observable } from 'rxjs/Observable';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OfferHeaderComponent } from './offer-header.component';
-import {IconLabelComponent} from "../../icon-label/icon-label.component";
-import {RouterTestingModule} from "@angular/router/testing";
-import {IconComponent} from "../../icon/icon.component";
-import {UserService} from "../../user.service";
-import {Offer} from "../../homepage-offer/offers.model";
+import {IconLabelComponent} from '../../icon-label/icon-label.component';
+import {RouterTestingModule} from '@angular/router/testing';
+import {IconComponent} from '../../icon/icon.component';
+import {UserService} from '../../user.service';
+import {Offer} from '../../homepage-offer/offers.model';
 
 describe('OfferHeaderComponent', () => {
   const editButtonCaption = 'Edytuj ofertę';

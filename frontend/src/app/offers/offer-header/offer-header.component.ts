@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Offer} from "../../homepage-offer/offers.model";
-import {UserService} from "../../user.service";
-import {Observable} from "rxjs";
+import {Offer} from '../../homepage-offer/offers.model';
+import {UserService} from '../../user.service';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'volontulo-offer-header',
